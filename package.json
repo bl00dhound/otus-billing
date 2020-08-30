@@ -1,0 +1,61 @@
+{
+  "name": "otus-billing",
+  "version": "1.0.0",
+  "description": "billing service for otus-architect project",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -p . && LOG_LEVEL=debug PORT=8001 forever start ./forever.json && tail -f ./logs/out.log",
+    "start:dev": "LOG_LEVEL=debug nodemon  -x 'tsc -p . && node -r dotenv/config svc | pino-pretty' -L -w src -w config -e ts,js,json",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bl00dhound/otus-billing.git"
+  },
+  "keywords": [
+    "billing",
+    "account"
+  ],
+  "author": "oleksii.kuznietsov@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bl00dhound/otus-billing/issues"
+  },
+  "homepage": "https://github.com/bl00dhound/otus-billing#readme",
+  "lint-staged": {
+    "**/*.ts": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/express-pino-logger": "^4.0.2",
+    "@types/pino": "^6.3.0",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "evque": "0.0.7",
+    "express": "^4.17.1",
+    "express-pino-logger": "^5.0.0",
+    "forever": "^3.0.2",
+    "http-shutdown": "^1.2.2",
+    "knex": "^0.21.5",
+    "nodemon": "^2.0.4",
+    "pg": "^8.3.3",
+    "pino": "^6.5.1",
+    "pino-pretty": "^4.2.0"
+  }
+}

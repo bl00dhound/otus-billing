@@ -1,0 +1,9 @@
+{
+  "uid": "auth-app",
+  "append": true,
+  "watch": true,
+  "script": "./svc/index.js",
+  "sourceDir": "./",
+  "outFile": "./logs/out.log",
+  "errFile": "./logs/error.log"
+}

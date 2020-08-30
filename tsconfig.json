@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "removeComments": true,
+    "allowJs": true,
+    "preserveConstEnums": true,
+    "module": "CommonJS",
+    "target": "es5",
+    "declaration": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "lib": ["ESNext"],
+    "outDir": "svc",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "*": ["types/*"]
+    },
+    "baseUrl": "./",
+    "typeRoots": ["node_modules/@types"],
+    "alwaysStrict": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "src/**/*.spec.ts", "svc"]
+}
