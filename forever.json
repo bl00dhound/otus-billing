@@ -1,9 +1,17 @@
-{
-  "uid": "auth-app",
+[{
+  "uid": "billing-app",
   "append": true,
   "watch": true,
   "script": "./svc/index.js",
   "sourceDir": "./",
   "outFile": "./logs/out.log",
   "errFile": "./logs/error.log"
-}
+}, {
+  "uid": "user-worker",
+  "append": true,
+  "watch": true,
+  "script": "./svc/workers/users/index.js",
+  "sourceDir": "./",
+  "outFile": "./logs/worker_users_out.log",
+  "errFile": "./logs/worker_users_error.log"
+}]
