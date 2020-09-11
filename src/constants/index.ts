@@ -1,5 +1,1 @@
-import Reasons from './reasons.enum';
-
-export default {
-  Reasons,
-};
+export { default as OrderStatus } from './orderStatus.enum';

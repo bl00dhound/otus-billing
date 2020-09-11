@@ -1,6 +1,6 @@
 interface IBalance {
   balance: number;
-  userId: number;
+  user_id: number;
 }
 
 export default IBalance;

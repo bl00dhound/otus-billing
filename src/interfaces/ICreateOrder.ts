@@ -1,7 +1,10 @@
+import { OrderStatus } from '../constants';
+
 interface ICreateOrder {
-  userId: number;
+  user_id: number;
   amount: number;
-  orderId?: string;
+  status: OrderStatus;
+  id?: string;
 }
 
 export default ICreateOrder;

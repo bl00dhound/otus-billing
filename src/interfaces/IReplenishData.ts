@@ -1,5 +1,5 @@
 interface IReplenishData {
-  userId: number;
+  user_id: number;
   amount: number;
 }
 

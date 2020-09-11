@@ -10,7 +10,7 @@ export default class AccountDAO {
 
   static async getBalance(userId: number): Promise<IBalance> {
     return db('user_accounts')
-      .first('balance', 'user_id as userId')
+      .first('balance', 'user_id')
       .where('user_id', userId);
   }
 
